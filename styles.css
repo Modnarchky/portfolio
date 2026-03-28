@@ -1,0 +1,37 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.section {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .section {
+    padding: 1rem;
+  }
+}
