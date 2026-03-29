@@ -1,16 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Your Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <style>
-        header {
-            background-color: #FFFFFF;
-        }
+        body { font-family: Arial, sans-serif; }
+        header { height: 80px; background-color: #333; color: white; display: flex; align-items: center; padding: 0 20px; }
+        h1 { margin: 0; }
+        nav { margin-left: auto; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        section { padding: 20px; }
     </style>
 </head>
 <body>
     <header>
-        <img src="JG_Brand_Assets_Logo.svg" alt="Logo">
+        <a href="index.html"><h1>Logo</h1></a>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
     </header>
-    <!-- Other content goes here -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write something about yourself here.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>List your projects here.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Provide your contact information here.</p>
+    </section>
 </body>
 </html>
