@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
       allProjects = projects;
 
       const isHomepage =
-        window.location.pathname.includes("index.html") ||
+        window.location.pathname.includes("/") ||
         window.location.pathname === "/" ||
         window.location.pathname.endsWith("/");
 

@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           tagContainer.innerHTML = tags
             .map(tag => `
-              <a class="tag-pill" href="/projects.html?tag=${slugify(tag)}">
+              <a class="tag-pill" href="/projects?tag=${slugify(tag)}">
                 ${tag}
               </a>
             `)
@@ -279,8 +279,8 @@ document.addEventListener("DOMContentLoaded", () => {
           // update URL without reload
           const newUrl =
             filter === "all"
-              ? "./projects.html"
-              : `./projects.html?tag=${filter}`;
+              ? "./projects"
+              : `./projects?tag=${filter}`;
 
           window.history.replaceState({}, "", newUrl);
         });

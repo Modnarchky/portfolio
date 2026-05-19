@@ -848,11 +848,15 @@ hr {
     border-radius: 30px;
   }
 
-  .about-section{
+  .column-reverse{
     flex-direction: column-reverse;
   }
 
   #featured-projects {
     justify-content: center;
   }
+
+  #how-it-began .img-wrapper {
+  width: 100%;
+}
 }
