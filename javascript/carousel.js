@@ -1,29 +1,25 @@
-const carousel = document.getElementById("carousel");
+const carousel = document.querySelector(".carousel");
 
 let speed = 1;
 let offset = 0;
 let halfWidth = 0;
 
-function setup() {
-  const items = Array.from(carousel.children);
+// duplicate items immediately
+const items = Array.from(carousel.children);
+items.forEach(el => carousel.appendChild(el.cloneNode(true)));
 
-  // duplicate once for seamless loop
-  items.forEach(el => {
-    carousel.appendChild(el.cloneNode(true));
-  });
-
-  // wait for layout AFTER images load
-  requestAnimationFrame(() => {
-    halfWidth = carousel.scrollWidth / 2;
-    animate();
-  });
+// measure after first paint
+function init() {
+  halfWidth = carousel.scrollWidth / 2;
+  requestAnimationFrame(animate);
 }
 
 function animate() {
   offset += speed;
 
+  // seamless loop (no snap)
   if (offset >= halfWidth) {
-    offset = 0;
+    offset -= halfWidth;
   }
 
   carousel.style.transform = `translate3d(${-offset}px, 0, 0)`;
@@ -31,4 +27,5 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-window.addEventListener("load", setup);
+// run immediately after layout settles
+window.addEventListener("load", init);

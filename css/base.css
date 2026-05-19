@@ -378,6 +378,14 @@ hr {
   transform: translateX(0);
 }
 
+.carousel > * {
+  flex: 0 0 auto;
+}
+
+.carousel img {
+  display: block;
+}
+
 .icon {
   flex: 0 0 auto;
   display: flex;
@@ -410,6 +418,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
+  text-align: left;
 }
 
 .project-link {
