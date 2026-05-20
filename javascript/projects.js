@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         card.classList.remove("is-ready");
       }, index * 60);
+
     });
 
     container.appendChild(fragment);
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
           .map(t => slugify(t.trim()));
 
         return filter === "all" || tags.includes(normalized);
+
       });
 
       renderProjects(filtered);
@@ -102,19 +104,19 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     });
+
   }
 
   // ---------- LOAD DATA ----------
-  fetch("./json/projects.json")
+  fetch("/json/projects.json")
     .then(res => res.json())
     .then(projects => {
 
       allProjects = projects;
 
+      // Jekyll homepage = "/"
       const isHomepage =
-        window.location.pathname.includes("/") ||
-        window.location.pathname === "/" ||
-        window.location.pathname.endsWith("/");
+        window.location.pathname === "/";
 
       if (isHomepage) {
 
@@ -125,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       } else {
 
-        // Projects page → all projects
+        // Other pages → all projects
         renderProjects(projects);
 
       }
