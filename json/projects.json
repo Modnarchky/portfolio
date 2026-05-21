@@ -34,10 +34,21 @@
     "id": "ambition-shared-services-campaign",
     "title": "Campaign: Shared Services 2024 - Ambition Asia",
     "tags": "Video Editing, Visual Design",
-    "thumbnail": "https://res.cloudinary.com/dkvnulmx9/image/upload/v1778693794/Thumbnail_2026_legdev.webp",
+    "thumbnail": "https://res.cloudinary.com/dkvnulmx9/image/upload/v1779390484/Thumbnail_2026_legdev.jpg",
     "url": "/projects/ambition-shared-services-campaign-2024",
     "role":"Designer, Video Editor",
     "deliverables":"Informative Video, Informative Social Media Posts, Recruitment Posts, Blog Images",
+    "tools": "Adobe Illustrator, Adobe After Effects, Adobe Photoshop",
+    "featured": false
+  },
+  {
+    "id": "blove-pet-needs",
+    "title": "Logo Design for Pet Needs Store - Blove Pet Needs",
+    "tags": "Brand Identity, Visual Design",
+    "thumbnail": "https://res.cloudinary.com/dkvnulmx9/image/upload/v1778693794/Thumbnail_2026_legdev.webp",
+    "url": "/projects/ambition-shared-services-campaign-2024",
+    "role":"Designer, Video Editor",
+    "deliverables":"Logo Design",
     "tools": "Adobe Illustrator, Adobe After Effects, Adobe Photoshop",
     "featured": false
   }
