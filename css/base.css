@@ -223,13 +223,13 @@ p {
 /* shared blob styles */
 .blob {
   position: absolute;
-  opacity: 0.35;
+  opacity: 1;
   mix-blend-mode: multiply;
 
   height: auto;
   max-width: none;
 
-  animation: float 10s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
 }
 
 /* responsive blob sizes */
@@ -237,14 +237,14 @@ p {
   width: clamp(100px, 14vw, 240px);
 
   top: 10%;
-  left: 2%;
+  left: 10%;
 }
 
 .blob-2 {
   width: clamp(80px, 10vw, 180px);
 
   bottom: 35%;
-  right: 12%;
+  right: 20%;
 
   animation-delay: 2s;
 }
