@@ -53,6 +53,11 @@
   color: #333; 
 }
 
+#mainNav a.active {
+  font-weight: 600;
+  border-bottom: 2px solid currentColor;
+}
+
 .nav-links {
   display: flex;
   flex-direction: row;
