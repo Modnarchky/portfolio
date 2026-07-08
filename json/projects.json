@@ -8,6 +8,9 @@
     "role":"Photographer, Photo Editor, Designer",
     "deliverables":"Final Packaging Design, Product Photos, Promotional Brochure, Website Banners",
     "tools": "Adobe Lightroom, Adobe Photoshop, Adobe Illustrator, Smartphone Camera",
+    "overview": "I created marketing and promotional assets optimised for e-commerce and retail platforms for its launch, ensuring brand consistency.",
+    "challenge":"The final packaging design was still in production during compositing. I digitally composited and edited temporarily realistic photos to align with the final product's intended visual. I maintained consistency across all SKU's product images and brand assets.",
+    "takeaways": "This project demonstrates my ability to deliver cohesive launch assets across multiple touchpoints while working within a regulated industry. It strengthened my understanding of HSA labelling requirements and the importance of integrating regulatory information without compromising visual clarity or brand consistency.",
     "featured": true
   },
   {
@@ -16,7 +19,12 @@
     "tags": "Brand Identity, Motion Graphics, Visual Design",
     "thumbnail": "https://res.cloudinary.com/dkvnulmx9/image/upload/v1777905882/SchemesSg_thumbnail_g06tfp.webp",
     "url": "/projects/schemes-sg",
-    "tools": "Adobe Lightroom, Adobe Photoshop, Adobe Illustrator, Smartphone Camera",
+    "role":"Designer, Animator",
+    "deliverables":"Logo, icons, customized loader",
+    "tools": "Adobe Illustrator, LottieFiles",
+    "overview": "SchemesSG is an AI-powered chatbot to connect users to the right social assistance schemes.",
+    "challenge": "The challenge was to design a visual identity that balanced warmth and professionalism, ensuring the platform felt welcoming to users while remaining clear and recognisable across digital touchpoints.",
+    "takeaways": "Designing for SchemesSG highlighted the responsibility designers have in creating inclusive experiences. Exploring WCAG guidelines helped me better understand how thoughtful decisions around colour, contrast, and simplicity can make a visual identity more accessible without compromising its character.",
     "featured": true
   },
   {
@@ -28,6 +36,9 @@
     "role":"Director, Producer, Camera Operator (Mobile), Video Editor",
     "deliverables":"Training Video",
     "tools": "Adobe After Effects, Adobe Premiere Pro, Adobe Photoshop, Smartphone Camera",
+    "overview": "This training video is a revamp of existing content designed for drug test collectors worldwide. It demonstrates the proper procedures for collecting urine samples, ensuring compliance with industry standards and regulations. It serves as an essential resource for training new collectors and reinforcing best practices among experienced professionals.",
+    "challenge": "The original video was outdated and lacked engagement, standing at 20 minutes long. The challenge was to create a more concise and visually focused video that effectively communicates the necessary information while keeping the audience engaged throughout. I worked with limited resources, without a proper phone tripod or professional lighting, and had to rely on creative solutions to achieve a polished final product.",
+    "takeaways": "This project reinforced the importance of clear and concise storytelling in informative and training content. Considering the natual attention span of humans, it is critical to reduce the timing of the training video. The video is created for drug test collectors worldwide, and English may not be their first language. taught me how to work with limited resources and still produce a high-quality video. It also reinforced the importance of clear communication and concise storytelling in educational content, as well as the value of collaboration and adaptability in the production process.",
     "featured": true
   },
   {
@@ -39,6 +50,23 @@
     "role":"Designer, Video Editor",
     "deliverables":"Informative Video, Informative Social Media Posts, Recruitment Posts, Blog Images",
     "tools": "Adobe Illustrator, Adobe After Effects, Adobe Photoshop",
+    "overview": "Ambition wants to attract top talent within the Shared Services sector. We created a campaign to showcase the latest market insights and available opportunities in the Shared Services industry.",
+    "challenge": "The main challenge was maintaining accuracy and visual consistency across multiple asset types while adapting each format to different layout requirements.",
+    "takeaways": "",
+    "featured": false
+  },
+  {
+    "id": "ambition-printed-corporate-assets",
+    "title": "Printed Corporate Assets for Ambition Asia",
+    "tags": "Visual Design",
+    "thumbnail": "https://res.cloudinary.com/dkvnulmx9/image/upload/v1783523233/ambition-printed-assets-thumbnail_vdmarw.webp",
+    "url": "/projects/ambition-printed-corporate-assets",
+    "role":"Designer",
+    "deliverables":"Calendar Design, Tote Bag Design, Standing Banner ",
+    "tools": " Adobe Photoshop, Adobe Illustrator, Adobe After Effects",
+    "overview": "Ambition needs printed corporate assets to reinforce their brand identity for internal and external communications. The assets have to be visually appealing and consistent with the brand's visual identity.",
+    "challenge": "The main challenge was maintaining accuracy and visual consistency across multiple asset types while adapting each format to different layout requirements.",
+    "takeaways": "",
     "featured": false
   },
   {
@@ -50,6 +78,9 @@
     "role":"Designer",
     "deliverables":"Logo Design, Visual Identity, Social Media Posts",
     "tools": " Adobe Photoshop, Adobe Illustrator, Adobe After Effects",
+    "overview": "K Pet Needs, a local pet supply store, needed a visual identity as a tribute to their late pets, Chocoby and Hunniby.",
+    "challenge": "Two beloved Frenchies passed away tragically from an accident. The visual identity needed to be carefully crafted to honor their memory while establishing a strong brand presence in the market.",
+    "takeaways": "The brand continued to operate under the visual identity I designed for five years until it closed in 2026, which showed me how much the identity resonated with the owners and reflected the story they wanted to preserve. This project taught me that great branding is about more than aesthetics—it is about creating meaningful, lasting connections through thoughtful design. Although the business has since closed, its legacy lives on through its Instagram archive, preserving the brand and the memories behind it.",
     "featured": false
   }
 ]

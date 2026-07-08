@@ -18,6 +18,7 @@ title: Ambition Shared Services Campaign
     {% include analytics.html %}
 </head>
 <body data-project-id="ambition-shared-services-campaign">
+  <div id="cursor">😐</div>
   <header id="header"></header>
   <section id="breadcrumbs" class="container left">
    <nav>
@@ -60,8 +61,7 @@ title: Ambition Shared Services Campaign
   <section id="project-details" class="container left row column-layout">
     <div style="flex: 1; text-align: left;">
       <h3>Project Overview</h3>
-      <p>Ambition wants to attract top talent within the Shared Services sector. We created a campaign to showcase the latest market insights and available opportunities in the Shared Services industry.
-      </p>
+      <p id="projectOverview"></p>
     </div>
     <div style="flex: 1; text-align: left;">
       <h3>Tools</h3>
@@ -72,7 +72,7 @@ title: Ambition Shared Services Campaign
     <div class="column-layout">
       <div style="flex: 1; text-align: left;">
         <h3>Challenge</h3>
-        <p>The main challenge was maintaining accuracy and visual consistency across multiple asset types while adapting each format to different layout requirements.</p>
+        <p id="projectChallenge"></p>
       </div>
       <div style="flex: 1; text-align: left;">
         <h3>Impact</h3>
@@ -147,4 +147,5 @@ title: Ambition Shared Services Campaign
   <script src="../javascript/header.js"></script>
   <script src="../javascript/tags.js"></script>
   <script src="../javascript/lightbox.js"></script>
+  <script src="../javascript/cursor.js"></script>
 </body>

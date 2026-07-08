@@ -15,6 +15,7 @@
   background: var(--color-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  cursor: none;
 }
 
 .logo {
@@ -26,6 +27,7 @@
 .logo img {
   height: 40px; 
   width: auto;
+  cursor: none;
 }
 
 .brand-name {
@@ -34,6 +36,7 @@
   font-family: Momo Trust Display, sans-serif; 
   font-weight: bold; color: #333; 
   align-items: middle;
+  cursor: none;
 }
 
 #mainNav {
@@ -84,6 +87,7 @@
 
 .nav-item > a:hover {
   color: #00DDDD;
+  cursor: none;
 }
 
 .nav-link {
@@ -114,7 +118,7 @@
   display: none;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: none;
   transition: none;
   animation: none;
   opacity: 1;

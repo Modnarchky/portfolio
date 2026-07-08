@@ -20,7 +20,8 @@ title: Projects
   {% include analytics.html %}
 </head>
 
-<body data-title="Projects">
+<body data-title="{{ page.title }}">
+  <div id="cursor">😐</div>
   <header id="header"></header>
   <!-- Services Section -->
     <section id="project-page" class="center container">
@@ -68,5 +69,6 @@ title: Projects
   <script src="./javascript/pageTitleText.js"></script>
   <script src="./javascript/tags.js"></script>
   <script src="./javascript/projects.js"></script>
+  <script src="./javascript/cursor.js"></script>
 </body>
 </html>

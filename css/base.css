@@ -13,6 +13,7 @@ body {
   opacity: 0;
   transition: opacity 0.15s ease;
   padding-top: 60px;
+  cursor: none;
 }
 
 body.loaded {
@@ -23,6 +24,36 @@ body.fade-out {
   opacity: 0;
 }
 
+#cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 30px;
+}
+
+.particle {
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    animation: particleFade 700ms ease-out forwards;
+}
+
+@keyframes particleFade {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -80%) scale(0.2) rotate(180deg);
+    }
+}
 
 /*Global Styles*/
 :root {
@@ -312,7 +343,7 @@ hr {
   padding: var(--space-4) var(--space-4);         /* space inside */
   border: 1px solid var(--color-text);     /* add border */
   border-radius: 80px;         /* rounded corners */
-  cursor: pointer;            /* pointer on hover */
+  cursor: none;
   font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
@@ -404,7 +435,7 @@ hr {
 
 .icon:hover {
   transform: scale(1.1);
-  cursor: pointer;
+  cursor: none;
 }
 
 #featured-projects{
@@ -457,7 +488,7 @@ hr {
   border: var(--color-border) solid 1px;
   overflow: hidden;
   border-radius: 30px;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -642,7 +673,7 @@ hr {
   border: 1px solid var(--color-border);
 
   border-radius: 50%;
-  cursor: pointer;
+  cursor: none;
   z-index: 10;
 }
 
@@ -667,7 +698,7 @@ hr {
   height: 8px;
   border-radius: 50%;
   background: var(--color-surface);
-  cursor: pointer;
+  cursor: none;
 }
 
 .dot:hover {

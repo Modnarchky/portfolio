@@ -18,6 +18,7 @@ title: Healgen Product Launch
     {% include analytics.html %}
 </head>
 <body data-project-id="healgen">
+  <div id="cursor">😐</div>
   <header id="header"></header>
   <section id="breadcrumbs" class="container left">
    <nav>
@@ -60,8 +61,7 @@ title: Healgen Product Launch
   <section id="project-details" class="container left row column-layout">
     <div style="flex: 1; text-align: left;">
       <h3>Project Overview</h3>
-      <p>I created marketing and promotional assets optimised for e-commerce and retail platforms for its launch, ensuring brand consistency. 
-      </p>
+      <p id="projectOverview"></p> 
     </div>
     <div style="flex: 1; text-align: left;">
       <h3>Tools</h3>
@@ -72,7 +72,7 @@ title: Healgen Product Launch
     <div class="column-layout">
       <div style="flex: 1; text-align: left;">
         <h3>Challenge</h3>
-        <p>The final packaging design was still in production during compositing. I digitally composited and edited temporarily realistic photos to align with the final product's intended visual. I maintained consistency across all SKU's product images and brand assets.</p>
+        <p id="projectChallenge"></p>
       </div>
     </div>
   </section> 
@@ -165,7 +165,7 @@ title: Healgen Product Launch
   </section>
   <section id="project-details" class="container left">
     <h3>Key Takeaways</h3>
-    <p>This project reinforced the importance of clear and concise storytelling in informative and training content. Considering the natual attention span of humans, it is critical to reduce the timing of the training video. The video is created for drug test collectors worldwide, and English may not be their first language. taught me how to work with limited resources and still produce a high-quality video. It also reinforced the importance of clear communication and concise storytelling in educational content, as well as the value of collaboration and adaptability in the production process.</p>
+    <p id="projectTakeaways"></p>
   </section>
   <div id="lightbox-compare" class="lightbox">
     <div class="before-after-container lightbox-compare-slider">
@@ -196,7 +196,6 @@ title: Healgen Product Launch
     <div class="zoom-container">
       <img id="lightboxZoomImg" class="lightbox-zoom-img" src="" alt="">
     </div>
-
   </div>
 
 </div>
@@ -207,4 +206,5 @@ title: Healgen Product Launch
   <script src="../javascript/header.js"></script>
   <script src="../javascript/tags.js"></script>
   <script src="../javascript/lightbox.js"></script>
+  <script src="../javascript/cursor.js"></script>
 </body>

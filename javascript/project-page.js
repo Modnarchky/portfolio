@@ -14,7 +14,7 @@ fetch('./json/projects.json')
     document.title = project.title;
 
     const breadcrumbEl = document.getElementById("breadcrumbTitle");
-if (breadcrumbEl) breadcrumbEl.textContent = project.title;
+    if (breadcrumbEl) breadcrumbEl.textContent = project.title;
 
     const titleEl = document.getElementById("projectTitle");
     if (titleEl) titleEl.textContent = project.title;
@@ -31,8 +31,11 @@ if (breadcrumbEl) breadcrumbEl.textContent = project.title;
     const deliverablesEl = document.getElementById("projectDeliverables");
     if (deliverablesEl) deliverablesEl.textContent = project.deliverables;
 
+    const challengeEl = document.getElementById("projectChallenge");
+    if (challengeEl) challengeEl.textContent = project.challenge;
+
     const takeawayEl = document.getElementById("projectTakeaways");
-    if (takeawayEl) takeawayEl.textContent = project.keyTakeaways;
+    if (takeawayEl) takeawayEl.textContent = project.takeaways;
 
     // tags
     const tagContainer = document.querySelector("#project-header .tag-spacer");
