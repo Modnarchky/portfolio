@@ -9,7 +9,7 @@ document.addEventListener("mouseover", (e) => {
 
     if (
         e.target.closest(
-            "a, button, .project-card-column, .primary-btn, .icon"
+            "a, button, .project-card-column, .primary-btn, .icon, .img-wrapper, .open-lightbox-zoom, .lightbox-zoom-close, .video-iframe, .open-lightbox-compare"
         )
     ) {
         cursor.textContent = "🤩";
@@ -52,7 +52,7 @@ document.addEventListener("mousemove", (e) => {
 
     setTimeout(() => {
         particle.remove();
-    }, 700);
+    }, 1000);
 
 });
 

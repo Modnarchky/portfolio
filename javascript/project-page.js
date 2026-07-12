@@ -31,6 +31,9 @@ fetch('./json/projects.json')
     const deliverablesEl = document.getElementById("projectDeliverables");
     if (deliverablesEl) deliverablesEl.textContent = project.deliverables;
 
+    const targetAudienceEl = document.getElementById("projectTargetAudience");
+    if (targetAudienceEl) targetAudienceEl.textContent = project.targetAudience;
+
     const challengeEl = document.getElementById("projectChallenge");
     if (challengeEl) challengeEl.textContent = project.challenge;
 

@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.json())
     .then(projects => {
 
-      allProjects = projects;
+      allProjects = projects.filter(project => project.shown);
 
       // Jekyll homepage = "/"
       const isHomepage =
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
 
         // Other pages → all projects
-        renderProjects(projects);
+        renderProjects(allProjects);
 
       }
 

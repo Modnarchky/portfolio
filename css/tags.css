@@ -46,7 +46,7 @@
   padding: 8px 14px;
   border: 1px solid #ccc;
   background: white;
-  cursor: pointer;
+  cursor: none;
   border-radius: 20px;
   transition: 0.2s;
 }
