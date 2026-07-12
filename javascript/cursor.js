@@ -1,4 +1,5 @@
 const cursor = document.getElementById("cursor");
+const iframe = document.querySelector("iframe");
 
 document.addEventListener("mousemove", (e) => {
     cursor.style.left = `${e.clientX}px`;
@@ -9,7 +10,7 @@ document.addEventListener("mouseover", (e) => {
 
     if (
         e.target.closest(
-            "a, button, .project-card-column, .primary-btn, .icon, .img-wrapper, .open-lightbox-zoom, .lightbox-zoom-close, .video-iframe, .open-lightbox-compare"
+            "a, button, .project-card-column, .primary-btn, .icon, .img-wrapper, .open-lightbox-zoom, .lightbox-zoom-close, .video-iframe, .open-lightbox-compare, .prototype, .prototype-iframe, .prototype-iframe-container"
         )
     ) {
         cursor.textContent = "🤩";
@@ -17,6 +18,16 @@ document.addEventListener("mouseover", (e) => {
         cursor.textContent = "😐";
     }
 
+});
+
+// Hide cursor over iframe
+iframe.addEventListener("mouseenter", () => {
+    cursor.style.display = "none";
+});
+
+iframe.addEventListener("mouseleave", () => {
+    cursor.style.display = "flex";
+});
 const particles = ["•", "•", "✦", "✧", "✩", "✫"];
 
 let lastParticle = 0;
@@ -53,7 +64,5 @@ document.addEventListener("mousemove", (e) => {
     setTimeout(() => {
         particle.remove();
     }, 1000);
-
-});
 
 });

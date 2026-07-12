@@ -1,0 +1,142 @@
+---
+title: Ambition Shared Services Campaign
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://res.cloudinary.com/dkvnulmx9/image/upload/v1777386339/JG_Brand_Assets_Logo_bporus.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/tags.css">
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% include analytics.html %}
+</head>
+<body data-project-id="ambition-uiux">
+  <div id="cursor">😐</div>
+  <header id="header"></header>
+  <section id="breadcrumbs" class="container left">
+   <nav>
+     <a href="./">Home</a><span class="material-icons current">chevron_left</span>
+     <a href="./projects" class="current">Projects</a><span class="material-icons">chevron_left</span>
+     <span id="breadcrumbTitle"></span>
+   </nav>
+  </section>
+  <section id="projects" class="container row left">
+    <div class="row column-layout">
+      <!-- LEFT IMAGE -->
+      <div class="project-main-image" style="flex: 1">
+       <div class="img-wrapper">
+        <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1779390484/Thumbnail_2026_legdev.jpg" class="open-lightbox-zoom">
+       </div>
+      </div> 
+      <!-- RIGHT CONTENT -->
+      <div class="column" style="flex: 1; gap: var(--space-6);">
+        <div>
+          <div id="project-header" class="column">
+    <h2 id="projectTitle"></h2>
+     <div id="projectTags" class="tag-spacer"></div>
+     </div>
+          <hr>
+        </div>
+        <div class="row column-layout">
+          <div style="flex: 1;">
+            <h5>My Role</h5>
+            <p id="projectRole"></p>
+          </div>
+          <div style="flex: 1;">
+            <h5>Deliverables</h5>
+            <p id="projectDeliverables"></p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </section> 
+  <section id="project-details" class="container left row column-layout">
+    <div style="flex: 1; text-align: left;">
+      <h3>Project Overview</h3>
+      <p id="projectOverview"></p>
+    </div>
+    <div style="flex: 1; text-align: left;">
+      <h3>Tools</h3>
+      <p id="projectTools"></p>
+    </div>
+  </section>
+  <section id="project-details" class="container left">
+    <div class="column-layout">
+      <div style="flex: 1; text-align: left;">
+        <h3>Challenge</h3>
+        <p id="projectChallenge"></p>
+      </div>
+      <div style="flex: 1; text-align: left;">
+        <h3>Impact</h3>
+        <p>All required campaign assets were produced within timeline and adapted across multiple formats, covering blog visuals, LinkedIn posts, and video asset. The job tiles were among the best-performing assets in the campaign, with reported engagement of around 39%. </p>
+      </div>
+    </div>
+  </section> 
+  <section id="project-details" class="container left">
+    <div>
+      <h3>Prototype</h3>
+    </div>
+    <div class="row column-layout">
+      <div style="flex: 1">
+       <iframe class="prototype" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="1080" src="https://embed.figma.com/proto/RN9SFtulTPDVtSmlt0fWnG/Ambition-Singapore---High-Fidelity-Prototype?node-id=301-351&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=301%3A351&embed-host=share" allowfullscreen></iframe>
+        <h4> Blog Tile</h4>
+        <div class="img-wrapper-full shadow" style="height: auto">
+         <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1782411834/Blog_mockup_yemlll.jpg" class="open-lightbox-zoom">
+        </div>
+        <h4 style="margin-top: var(--space-6)"> Hot Job Tiles</h4>
+        <div class="img-wrapper-full shadow" style="height: auto">
+         <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1782413486/Hotjobs_mockup_n2oyaj.jpg" class="open-lightbox-zoom">
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="lightbox-compare" class="lightbox">
+    <div class="before-after-container lightbox-compare-slider">
+      <button class="lightbox-close" id="lightboxClose">
+        <span class="material-icons">close</span>
+      </button>
+      <img id="lb-after" class="after-img">
+      <div class="after-label">
+        <h3>After</h3>
+      </div>
+      <div class="before-wrapper">
+        <img id="lb-before" class="before-img">
+        <div class="before-label">
+          <h3>Before</h3>
+        </div>
+      </div>
+      <input type="range" min="0" max="100" value="50" class="slider">
+      <div class="slider-line"></div>
+    </div></div>
+    <div id="lightbox-zoom" class="lightbox-zoom">
+
+  <div class="lightbox-zoom-content">
+
+    <button class="lightbox-close" id="lightboxZoomClose">
+      <span class="material-icons">close</span>
+    </button>
+
+    <div class="zoom-container">
+      <img id="lightboxZoomImg" class="lightbox-zoom-img" src="" alt="">
+    </div>
+
+  </div>
+
+</div>
+  <script src="../javascript/base.js"></script>
+  <script src="../reload.js"></script>
+  <script src="../javascript/project-page.js"></script>
+  <script src="../javascript/carousel.js"></script>
+  <script src="../javascript/header.js"></script>
+  <script src="../javascript/tags.js"></script>
+  <script src="../javascript/lightbox.js"></script>
+  <script src="../javascript/cursor.js"></script>
+</body>

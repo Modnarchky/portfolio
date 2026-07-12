@@ -39,6 +39,10 @@
   cursor: none;
 }
 
+.brand-name:hover {
+  text-decoration: none;
+}
+
 #mainNav {
   font-family: Inter, sans-serif;
   font-size: 16px;

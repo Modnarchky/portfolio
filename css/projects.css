@@ -354,7 +354,7 @@
     width: 100%;
     height: auto;
     border-radius: 20px;
-}
+  }
 
 .video-wrapper {
   display: flex;
@@ -367,6 +367,7 @@
   height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 20px;
+  cursor: none;
 }
 
 @media (max-width: 1024px) {
