@@ -21,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projects.forEach((project, index) => {
 
-      const tags = project.tags
-        .split(",")
-        .map(t => t.trim());
-
+      const tags = project.tags || [];
       const tagSlugs = tags.map(slugify).join(",");
 
       const card = document.createElement("a");
@@ -76,11 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const filtered = allProjects.filter(project => {
 
-        const tags = project.tags
-          .split(",")
-          .map(t => slugify(t.trim()));
+        const tags = (project.tags || []).map(tag => slugify(tag));
 
-        return filter === "all" || tags.includes(normalized);
+return normalized === "all" || tags.includes(normalized);
 
       });
 

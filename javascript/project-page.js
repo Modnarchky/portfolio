@@ -23,19 +23,22 @@ fetch('./json/projects.json')
     if (overviewEl) overviewEl.textContent = project.overview;
 
     const toolsEl = document.getElementById("projectTools");
-    if (toolsEl) toolsEl.textContent = project.tools;
+    if (toolsEl) toolsEl.textContent = project.tools.join(", ");
 
     const roleEl = document.getElementById("projectRole");
-    if (roleEl) roleEl.textContent = project.role;
+    if (roleEl) roleEl.textContent = project.role.join(", ");
 
     const deliverablesEl = document.getElementById("projectDeliverables");
-    if (deliverablesEl) deliverablesEl.textContent = project.deliverables;
+    if (deliverablesEl) deliverablesEl.textContent = project.deliverables.join(", ");
 
     const targetAudienceEl = document.getElementById("projectTargetAudience");
     if (targetAudienceEl) targetAudienceEl.textContent = project.targetAudience;
 
     const challengeEl = document.getElementById("projectChallenge");
     if (challengeEl) challengeEl.textContent = project.challenge;
+
+    const impactEl = document.getElementById("projectImpact");
+    if (impactEl) impactEl.textContent = project.impact;
 
     const takeawayEl = document.getElementById("projectTakeaways");
     if (takeawayEl) takeawayEl.textContent = project.takeaways;
@@ -44,7 +47,7 @@ fetch('./json/projects.json')
     const tagContainer = document.querySelector("#project-header .tag-spacer");
 
     if (tagContainer && project.tags) {
-      const tags = project.tags.split(",").map(t => t.trim());
+      const tags = project.tags.map(t => t.trim());
 
       tagContainer.innerHTML = tags
         .map(tag => `<span class="tag-pill">${tag}</span>`)

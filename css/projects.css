@@ -3,7 +3,7 @@
  padding-block: var(--space-2);
 }
 
-#project-details {
+.project-details {
  padding-block: var(--space-4);
 }
 
@@ -17,6 +17,12 @@
   text-align: left;
   margin: 0;
   padding: 0;
+}
+
+#project-metadata {
+  padding-top: var(--space-6);
+  border-radius: 30px;
+  width: 100%;
 }
 
 .project-subsection {

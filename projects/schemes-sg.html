@@ -23,8 +23,8 @@ title: Schemes SG
   <header id="header"></header>
   <section id="breadcrumbs" class="container left">
    <nav>
-     <a href="/">Home</a><span class="material-icons current">chevron_left</span>
-     <a href="/projects" class="current">Projects</a><span class="material-icons">chevron_left</span>
+     <a href="./">Home</a><span class="material-icons current">chevron_left</span>
+     <a href="./projects" class="current">Projects</a><span class="material-icons">chevron_left</span>
      <span id="breadcrumbTitle"></span>
    </nav>
   </section>
@@ -37,49 +37,52 @@ title: Schemes SG
        </div>
       </div>
       <!-- RIGHT CONTENT -->
-      <div class="column" style="flex: 1; gap: var(--space-6);">
+      <div class="column" style="flex: 1; gap: var(--space-3);">
         <div>
           <div id="project-header" class="column">
-            <h2 id="projectTitle"></h2>
-            <div id="projectTags" class="tag-spacer"></div>
-          </div>
-          <hr>
-        </div>
-        <div class="row column-layout">
-          <div style="flex: 1;">
-            <h5>My Role</h5>
-            <p id="projectRole"></p>
-          </div>
-          <div style="flex: 1;">
-            <h5>Deliverables</h5>
-            <p id="projectDeliverables"></p>
-          </div>
-        </div>
-        <hr>
+    <h2 id="projectTitle"></h2>
+     <div id="projectTags" class="tag-spacer"></div>
+     </div>
+    </div>
+        <div style="flex: 1; text-align: left;">
+      <h3>Project Overview</h3>
+      <p id="projectOverview"></p> 
+    </div>
       </div>
     </div>
   </section> 
-  <section id="project-details" class="container left row column-layout">
-    <div style="flex: 1; text-align: left;">
-      <h3>Project Overview</h3>
-      <p id="projectOverview"></p>
-      <a href="https://schemes.sg/" target="_blank" class="primary-btn">View Live Site</a>
-    </div>
-    <div style="flex: 1; text-align: left;">
-      <h3>Tools</h3>
+  <section class="project-details container left row column-layout">
+    <div id="project-metadata" class="row column-layout">
+          <div style="flex: 1;">
+            <h4>My Role</h4>
+            <p id="projectRole"></p>
+          </div>
+          <div style="flex: 1;">
+            <h4>Deliverables</h4>
+            <p id="projectDeliverables"></p>
+          </div>
+          <div style="flex: 1;">
+      <h4>Tools</h4>
       <p id="projectTools"></p>
-      </p>
+    </div>
+    <div style="flex: 1;">
+      <h4>Target Audience</h4>
+      <p id="projectTargetAudience"></p>
+    </div>
     </div>
   </section>
-  <section id="project-details" class="container left">
-    <div class="column-layout">
+  <section class="project-details container">
+    <hr>
+  </section>
+  <section class="project-details container left">
+    <div class="row column-layout">
       <div style="flex: 1; text-align: left;">
         <h3>Challenge</h3>
         <p id="projectChallenge"></p>
       </div>
     </div>
   </section> 
-  <section id="project-details" class="container left">
+  <section class="project-details container left">
     <div class="project-subsection">
       <h3>Logo Design</h3>
       <h4>Concept - Connecting Needs with Compassion through Technology</h4>
@@ -96,7 +99,7 @@ title: Schemes SG
     </div>
   </section>
 
-  <section id="project-details" class="container left">
+  <section class="project-details container left">
     <h3>Key Takeaways</h3>
     <p id="projectTakeaways"></p>
   </section>
