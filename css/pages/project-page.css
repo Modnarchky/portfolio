@@ -1,10 +1,6 @@
 
-#projects {
- padding-block: var(--space-2);
-}
-
-.project-details {
- padding-block: var(--space-4);
+#project-main {
+ padding-block: 0;
 }
 
 #project-header {
@@ -38,14 +34,14 @@
 .final-img.open-lightbox-compare {
   width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   transition: transform 0.3s ease;
 }
 
 .final-img.open-lightbox-compare:hover {
   width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   transform: scale(1.1);
   cursor: none;
 }
@@ -114,7 +110,7 @@
   height: 44px;
   border-radius: 50%;
 
-  background: var(--color-bg);
+  background: var(--color-white);
   color: var(--color-border);
 
   display: flex;
@@ -183,7 +179,7 @@
 }
 
 .after-label h3 {
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: var(--text-lg);
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -211,7 +207,7 @@
   opacity: 1;
   transform: translateY(0px);
 
-  color: var(--color-bg);
+  color: var(--color-white);
   font-size: var(--text-xl);
   line-height: 44px;
 
@@ -359,20 +355,21 @@
     aspect-ratio: 16 / 9;
     width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
   }
 
 .video-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: var(--space-4);
 }
 
 .video-wrapper iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   cursor: none;
 }
 

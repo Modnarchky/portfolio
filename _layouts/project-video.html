@@ -1,0 +1,117 @@
+---
+layout: default
+---
+<section id="breadcrumbs">
+  <nav class="container left">
+    <a href="./">Home</a><span class="material-icons current">chevron_left</span>
+    <a href="./projects" class="current">Projects</a><span class="material-icons">chevron_left</span>
+    <span id="breadcrumbTitle">{{ page.title }}</span>
+  </nav>
+</section>
+
+
+<section id="project-main" class="container center video-wrapper">
+  <iframe width="100%" height="680px" aspect-ratio="16 / 9" src="{{ page.video_url }}" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</section>
+  
+<section class="project-details">
+  <div id="project-header" class="container left column">
+    <div id="project-header" class="column">
+        <h2 id="projectTitle">{{ page.project_title }}</h2>
+        <div id="projectTags" class="tag-spacer">
+          {% for tag in page.tags %}
+          <a
+            class="tag-pill tag"
+            href="/projects?tag={{ tag | downcase | replace: ' ', '-' }}">
+            {{ tag }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+  
+  <div class="row column-layout" style="width: 100%">
+    <div style="flex: 1;">
+      <h4>My Role</h4>
+      <p id="projectRole">{{ page.role | join: ", " }}</p>
+    </div>
+    <div style="flex: 1;">
+      <h4>Deliverable</h4>
+      <p id="projectDeliverables">{{ page.deliverables | join: ", " }}</p>
+    </div>
+    <div style="flex: 1;">
+      <h4>Tools</h4>
+      <p id="projectTools">{{ page.tools | join: ", " }}</p>
+    </div>
+    <div style="flex: 1;">
+      <h4>Target Audience</h4>
+      <p id="projectTargetAudience">{{ page.targetAudience }}</p>
+    </div>
+  </div>
+  </div> 
+</section>
+
+<section class="project-details">
+  <hr class="container">
+</section>
+  
+<section class="project-details">
+  <div class="container row left column-layout">
+    <div style="flex: 1">
+      <h3>Project Overview</h3>
+      <p id="projectOverview">{{ page.overview }}</p>
+    </div>
+    <div style="flex: 1;">
+      <h3>Challenge</h3>
+      <p id="projectChallenge">{{ page.challenge }}</p>
+    </div>
+  </div>
+</section>
+  
+<section class="project-details">
+  <div class="container left">
+  <h3>Process</h3>
+{{ content }}
+  </div>
+</section>
+  
+<section class="project-details">
+  <div class="container left">
+  <h3>Key Takeaways</h3>
+  <p id="projectTakeaways">{{ page.takeaways }}</p>
+  </div>
+</section>
+  
+<div id="lightbox-compare" class="lightbox">
+  <div class="before-after-container lightbox-compare-slider">
+    <button class="lightbox-close" id="lightboxClose">
+      <span class="material-icons">close</span>
+    </button>
+    <img id="lb-after" class="after-img">
+    <div class="after-label">
+      <h3>After</h3>
+    </div>
+    <div class="before-wrapper">
+      <img id="lb-before" class="before-img">
+      <div class="before-label">
+        <h3>Before</h3>
+      </div>
+    </div>
+    <input type="range" min="0" max="100" value="50" class="slider">
+    <div class="slider-line"></div>
+  </div>
+</div>
+    
+<div id="lightbox-zoom" class="lightbox-zoom">
+  <div class="lightbox-zoom-content">
+    <button class="lightbox-close" id="lightboxZoomClose">
+      <span class="material-icons">close</span>
+    </button>
+
+    <div class="zoom-container">
+      <img id="lightboxZoomImg" class="lightbox-zoom-img" src="" alt="">
+    </div>
+  </div>
+</div>

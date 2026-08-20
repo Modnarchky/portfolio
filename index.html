@@ -1,38 +1,10 @@
 ---
+permalink: /
+layout: default
 title: Jean Goh's Portfolio
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <base href="/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Jean Goh's Portfolio">
-  <meta property="og:description" content="Self-built — Designed, coded & deployed.">
-  <meta property="og:image" content="https://res.cloudinary.com/dkvnulmx9/image/upload/v1782653756/JG_OpenGraph_agq74i.webp">
-  <meta property="og:url" content="https://jeanworks-design.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Jean Goh's Portfolio">
-  <meta property="og:image:alt" content="Jean Goh's Portfolio - Self-built, designed, coded and deployed.">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="https://res.cloudinary.com/dkvnulmx9/image/upload/v1777386339/JG_Brand_Assets_Logo_bporus.svg" type="image/svg+xml">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/tags.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  {% include analytics.html %}
-</head>
-
-<body data-title="{{ page.title }}">
-  <div id="cursor">😐</div>
-  <header id="header"></header>
-  <!-- Hero Section -->
+ <!-- Hero Section -->
   <section id="hero">
     <div class="hero-content container center reveal">
       <h1>Hello, My name is Jean</h1>
@@ -43,7 +15,6 @@ title: Jean Goh's Portfolio
       <a href="./projects" class="primary-btn">View Projects</a>
       </div>
     </div>
-  </section>
 
   <div class="hero-overlay">
     <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1780417489/Icons_Hello_qefrmm.svg" class="blob blob-1">
@@ -93,7 +64,33 @@ title: Jean Goh's Portfolio
   <!-- Projects Section -->
   <section id="featured-projects" class="center column container reveal">
     <h2>Featured Projects</h2>
-  <div class="left row column-layout" id="projectsGrid"></div>
+  <div id="projectsGrid">
+      {% assign projects = site.projects | sort: "order" %}
+      {% for project in projects %}
+          {% if project.featured%}
+        <a class="project-link"
+           href="{{ project.url }}"
+           data-tags="{% for tag in project.tags %}{{ tag | downcase | replace: ' ', '-' }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+
+          <div class="project-card-column">
+            <div class="project-thumbnails">
+              <img src="{{ project.thumbnail }}" alt="{{ project.project_title }}">
+            </div>
+            <div class="project-info">
+              <h4>{{ project.project_title }}</h4>
+              <div class="tag-spacer">
+                {% for tag in project.tags %}
+                  <span class="tag-pill">
+                    {{ tag }}
+                  </span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </a>
+      {% endif %}
+      {% endfor %}
+    </div>
 </section>
 
   <!-- Testimonials -->
@@ -160,14 +157,3 @@ title: Jean Goh's Portfolio
 <div class="dots"></div>
 </div> 
   </section>
-  <script src="./javascript/base.js"></script>
-  <script src="./reload.js"></script>
-  <script src="./javascript/animation.js"></script>
-  <script src="./javascript/carousel.js"></script>
-  <script src="./javascript/header.js"></script>
-  <script src="./javascript/testimonial.js"></script>
-  <script src="./javascript/projects.js"></script>
-  <script src="./javascript/tags.js"></script>
-  <script src="./javascript/cursor.js"></script>
-</body>
-</html>

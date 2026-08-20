@@ -1,0 +1,116 @@
+---
+layout: default
+---
+<style>
+  :root {
+    --project-color-main: {{ page.color.main }};
+    --project-color-secondary: {{ page.color.secondary }};
+  }
+</style>
+<section id="breadcrumbs">
+  <nav class="container left">
+    <a href="./">Home</a><span class="material-icons current">chevron_left</span>
+    <a href="./projects" class="current">Projects</a><span class="material-icons">chevron_left</span>
+    <span id="breadcrumbTitle">{{ page.title }}</span>
+  </nav>
+</section>
+
+<section id="project-main">
+  <div class="container left row column-layout stretch">
+    <!-- LEFT IMAGE -->
+    <div class="project-main-image" style="flex: 1">
+      <div class="img-wrapper">
+        <img src="{{ page.thumbnail }}" class="open-lightbox-zoom">
+      </div>
+    </div> 
+    <!-- RIGHT CONTENT -->
+    <div class="column" style="flex: 1; gap: var(--space-3);">
+      <div id="project-header" class="column">
+        <h2 id="projectTitle">{{ page.project_title }}</h2>
+        <div id="projectTags" class="tag-spacer">
+          {% for tag in page.tags %}
+          <a
+            class="tag-pill tag"
+            href="/projects?tag={{ tag | downcase | replace: ' ', '-' }}">
+            {{ tag }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div style="flex: 1; text-align: left;">
+        <h3>Project Overview</h3>
+        <p id="projectOverview">{{ page.overview }}</p> 
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="project-details">
+  <div id="project-metadata" class="container left row column-layout">
+    <div style="flex: 1;">
+      <h4>My Role</h4>
+      <p id="projectRole">{{ page.role | join: ", " }}</p>
+    </div>
+    <div style="flex: 1;">
+      <h4>Deliverables</h4>
+      <p id="projectDeliverables">{{ page.deliverables | join: ", " }}</p>
+    </div>
+    <div style="flex: 1;">
+      <h4>Tools</h4>
+      <p id="projectTools">{{ page.tools | join: ", " }}</p>
+    </div>
+    <div style="flex: 1;">
+      <h4>Target Audience</h4>
+      <p id="projectTargetAudience">{{ page.targetAudience | join: ", " }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="project-details">
+  <hr class="container">
+</section>
+
+<section class="project-details">
+  <div class="container left row column-layout">
+    <div style="flex: 1; text-align: left;">
+      <h3>Challenge</h3>
+      <p id="projectChallenge">{{ page.challenge.intro }}</p>
+      <ul>{% for point in page.challenge.points %}
+        <li><p>{{ point }}</p></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% if page.impact %}
+    <div style="flex: 1; text-align: left;">
+      <h3>Impact</h3>
+      {% for item in page.impact %}
+      <p style="font-size: var(--text-xl); font-weight: bold; color:#00693e; margin: 0;"> {{ item.value }}</p>
+      <p style="margin: 0 0 var(--space-6) 0;"> {{ item.description }}</p>
+      {% endfor %}
+    </div>
+    <p id="projectImpact">{{ page.impact.value }}</p>
+  </div>
+  {% endif %}
+</section> 
+
+<section class="project-details">
+  <div class="container left">
+    <h3>Prototype</h3>
+     <iframe class="prototype" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="1080" src="{{ page.prototype }}" allowfullscreen></iframe>
+  </div>
+</section>  
+
+<section class="project-details">
+  <hr class="container">
+</section>
+
+{{ content }}
+
+{% if page.takeaways %}
+<section class="project-details">
+  <div class="container left row column-layout">
+      <h3>Key Takeaways</h3>
+      <p>{{ page.takeaways }}</p>
+   </div>
+</section>
+{% endif %}

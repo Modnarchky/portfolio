@@ -1,0 +1,33 @@
+/*Global Styles*/
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --color-text: #333;
+  --color-white: #ffffff;
+  --color-black: black;
+  --color-surface: #edeae6;
+  --color-primary: #00DDDD;
+  --color-accent: #FFDF00;
+  --color-border: #333;
+
+  --font-body: Inter, sans-serif;
+  --font-display: "Momo Trust Display", sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2xl: 3rem;
+  --text-3xl: 5rem;
+
+  --border-radius: 20px;
+}

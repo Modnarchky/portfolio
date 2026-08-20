@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<article class="blog-post container reveal" data-title="{{ page.title }}">
+
+  <header class="blog-header">
+    <p class="blog-date">
+      {{ page.date | date: "%B %-d, %Y" }}
+    </p>
+    <h2>{{ page.title }}</h2>
+  </header>
+  <img class="blog-header-image" src="{{ page.image }}" alt="{{ page.title }}">
+
+  <div class="blog-content">
+    {{ content }}
+  </div>
+  <section>
+  <nav class="post-navigation" aria-label="Post navigation">
+    {% if page.previous %}
+    <a class="post-nav post-nav-prev" href="{{ page.previous.url }}">
+      <p>← Previous <br>
+        <strong>{{ page.previous.title | truncate: 30 }}</strong></p>
+    </a>
+    {% endif %}
+
+    {% if page.next %}
+    <a class="post-nav post-nav-next" href="{{ page.next.url }}">
+      <p>Next → <br><strong>{{ page.next.title | truncate: 30 }}</strong></p>
+    </a>
+    {% endif %}
+
+  </nav>
+</section>
+</article>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Jean Goh's Portfolio">
+  <meta property="og:description" content="Self-built — Designed, coded & deployed.">
+  <meta property="og:image" content="https://res.cloudinary.com/dkvnulmx9/image/upload/v1782653756/JG_OpenGraph_agq74i.webp">
+  <meta property="og:url" content="https://jeanworks-design.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jean Goh's Portfolio">
+  <meta property="og:image:alt" content="Jean Goh's Portfolio - Self-built, designed, coded and deployed.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="https://res.cloudinary.com/dkvnulmx9/image/upload/v1777386339/JG_Brand_Assets_Logo_bporus.svg" type="image/svg+xml">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  {% include analytics.html %}
+</head>
+
+<body data-title="{{ page.title }}">
+  <div id="cursor">😐</div>
+  <header id="header"></header>
+
+  {{ content }}
+
+  <div id="lightbox-compare" class="lightbox">
+    <div class="before-after-container lightbox-compare-slider">
+      <button class="lightbox-close" id="lightboxClose">
+        <span class="material-icons">close</span>
+      </button>
+      <img id="lb-after" class="after-img">
+      <div class="after-label">
+        <h3>After</h3>
+      </div>
+      <div class="before-wrapper">
+        <img id="lb-before" class="before-img">
+        <div class="before-label">
+          <h3>Before</h3>
+        </div>
+      </div>
+      <input type="range" min="0" max="100" value="50" class="slider">
+      <div class="slider-line"></div>
+    </div>
+  </div>
+  <div id="lightbox-zoom" class="lightbox-zoom">
+    <div class="lightbox-zoom-content">
+      <button class="lightbox-close" id="lightboxZoomClose">
+        <span class="material-icons">close</span>
+      </button>
+      <div class="zoom-container">
+        <img id="lightboxZoomImg" class="lightbox-zoom-img" src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script src="/javascript/base.js"></script>
+  <script src="/javascript/reload.js"></script>
+  <script src="/javascript/animation.js"></script>
+  <script src="/javascript/carousel.js"></script>
+  <script src="/javascript/header.js"></script>
+  <script src="/javascript/testimonial.js"></script>
+  <script src="/javascript/tags.js"></script>
+  <script src="/javascript/cursor.js"></script>
+  <script src="/javascript/lightbox.js"></script>
+  <script src="/javascript/pageTitleText.js"></script>
+</body>
+</html>

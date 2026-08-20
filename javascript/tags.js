@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================================================
-     HELPERS
-  ========================================================= */
   function slugify(tag) {
     return tag
       .toLowerCase()
@@ -11,281 +8,142 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================================================
-     FETCH PROJECT DATA
+     PROJECT CARDS
   ========================================================= */
-  fetch('./json/projects.json')
-    .then(res => res.json())
-    .then(projects => {
 
-      const projectId = document.body.dataset.projectId;
+  const projectCards = document.querySelectorAll(".project-link");
 
-      /* =========================================================
-         PROJECT DETAIL PAGE
-      ========================================================= */
-      if (projectId) {
+  if (!projectCards.length) return;
 
-        const project = projects.find(p => p.id === projectId);
-        if (!project) return;
 
-        const titleEl = document.getElementById("projectTitle");
-        const breadcrumbEl = document.getElementById("breadcrumbTitle");
+  /* =========================================================
+     FILTER BUTTONS
+  ========================================================= */
 
-        if (titleEl) titleEl.textContent = project.title;
-        if (breadcrumbEl) breadcrumbEl.textContent = project.title;
+  const buttons = document.querySelectorAll(".filter-btn");
 
-        const tagContainer = document.getElementById("projectTags");
 
-        if (tagContainer && project.tags) {
+  function setActiveButton(filter) {
 
-          const tags = project.tags.split(",").map(t => t.trim());
+    buttons.forEach(btn => {
+      btn.classList.toggle(
+        "active",
+        btn.dataset.filter === filter
+      );
+    });
 
-          tagContainer.innerHTML = tags
-            .map(tag => `
-              <a class="tag-pill" href="/projects?tag=${slugify(tag)}">
-                ${tag}
-              </a>
-            `)
-            .join("");
-        }
-      }
+  }
 
-      /* =========================================================
-         PROJECT LIST PAGE
-      ========================================================= */
-      const filterContainer = document.getElementById("project-filters");
 
-      if (filterContainer) {
+  /* =========================================================
+     FILTER PROJECTS
+  ========================================================= */
 
-        let allTags = [];
+  function filterProjects(filter) {
 
-        projects.forEach(project => {
-          if (!project.tags) return;
+    projectCards.forEach(card => {
 
-          allTags.push(
-            ...project.tags.split(",").map(t => t.trim())
-          );
-        });
+      const tags = (card.dataset.tags || "")
+        .split(",")
+        .map(tag => slugify(tag));
 
-        const uniqueTags = [...new Set(allTags)];
+      const match =
+        filter === "all" ||
+        tags.includes(slugify(filter));
 
-        filterContainer.innerHTML = `
-          <div class="mobile-filter">
-
-            <button id="filter-toggle" class="filter-icon-btn">
-              <span class="material-icons">filter_list</span>
-            </button>
-
-            <div class="mobile-filter-menu">
-
-              <button 
-                class="filter-btn active" 
-                data-filter="all"
-              >
-                All
-              </button>
-
-              ${uniqueTags.map(tag => `
-                <button 
-                  class="filter-btn" 
-                  data-filter="${slugify(tag)}"
-                >
-                  ${tag}
-                </button>
-              `).join("")}
-
-            </div>
-          </div>
-
-          <div class="desktop-filters center">
-
-            <button 
-              class="filter-btn active" 
-              data-filter="all"
-            >
-              All
-            </button>
-
-            ${uniqueTags.map(tag => `
-              <button 
-                class="filter-btn" 
-                data-filter="${slugify(tag)}"
-              >
-                ${tag}
-              </button>
-            `).join("")}
-
-          </div>
-        `;
-      }
-
-      /* =========================================================
-         MOBILE FILTER TOGGLE
-      ========================================================= */
-      const filterToggle = document.getElementById("filter-toggle");
-      const mobileMenu = document.querySelector(".mobile-filter-menu");
-
-      if (filterToggle && mobileMenu) {
-
-        filterToggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("show");
-        });
-
-        // close menu when clicking outside
-        document.addEventListener("click", (e) => {
-
-          const insideMenu =
-            mobileMenu.contains(e.target) ||
-            filterToggle.contains(e.target);
-
-          if (!insideMenu) {
-            mobileMenu.classList.remove("show");
-          }
-        });
-      }
-
-      /* =========================================================
-         APPLY TAGS TO CARDS
-      ========================================================= */
-      const projectCards = document.querySelectorAll(".project-link");
-
-      projectCards.forEach(card => {
-
-        const tags = card.dataset.tags;
-        if (!tags) return;
-
-        const container = card.querySelector(".tag-spacer");
-        if (!container) return;
-
-        const tagArray = tags
-          .split(",")
-          .map(t => t.trim());
-
-        container.innerHTML = tagArray
-          .map(tag => `
-            <span class="tag-pill">
-              ${tag.replace(/-/g, " ")}
-            </span>
-          `)
-          .join("");
-
+      if (match) {
+        card.classList.remove("is-hidden");
         card.classList.add("is-visible");
-      });
-
-      /* =========================================================
-         ACTIVE BUTTON STATE
-      ========================================================= */
-      const buttons = document.querySelectorAll(".filter-btn");
-
-      function setActiveButton(filter) {
-
-        buttons.forEach(btn => {
-
-          btn.classList.toggle(
-            "active",
-            btn.dataset.filter === filter
-          );
-        });
-      }
-
-      /* =========================================================
-         FILTER PROJECTS
-      ========================================================= */
-      function filterProjects(filter) {
-
-        const cards = Array.from(
-          document.querySelectorAll(".project-link")
-        );
-
-        // fade all out
-        cards.forEach(card => {
-          card.classList.remove("is-visible");
-          card.classList.add("is-hidden");
-        });
-
-        // filter after fade
-        setTimeout(() => {
-
-          let delay = 0;
-
-          cards.forEach(card => {
-
-            const tags = (card.dataset.tags || "")
-              .split(",")
-              .map(t => t.trim());
-
-            const match =
-              filter === "all" ||
-              tags.includes(filter);
-
-            if (match) {
-
-              card.classList.remove("is-hidden");
-
-              card.style.opacity = 0;
-              card.style.transform = "translateY(12px)";
-
-              setTimeout(() => {
-
-                card.classList.add("is-visible");
-
-                card.style.opacity = "";
-                card.style.transform = "";
-
-              }, delay);
-
-              delay += 50;
-            }
-          });
-
-        }, 300);
-      }
-
-      /* =========================================================
-         URL FILTER
-      ========================================================= */
-      const urlParams = new URLSearchParams(window.location.search);
-
-      const activeTag = urlParams.get("tag");
-
-      if (activeTag) {
-
-        filterProjects(activeTag);
-
-        setActiveButton(activeTag);
-
       } else {
-
-        filterProjects("all");
+        card.classList.remove("is-visible");
+        card.classList.add("is-hidden");
       }
 
-      /* =========================================================
-         BUTTON EVENTS
-      ========================================================= */
-      buttons.forEach(btn => {
+    });
 
-        btn.addEventListener("click", () => {
+  }
 
-          const filter = btn.dataset.filter;
 
-          filterProjects(filter);
+  /* =========================================================
+     URL FILTER
+  ========================================================= */
 
-          setActiveButton(filter);
+  const urlParams = new URLSearchParams(
+    window.location.search
+  );
 
-          // close mobile menu after selection
-          if (mobileMenu) {
-            mobileMenu.classList.remove("show");
-          }
+  const activeTag = urlParams.get("tag");
 
-          // update URL without reload
-          const newUrl =
-            filter === "all"
-              ? "./projects"
-              : `./projects?tag=${filter}`;
+  if (activeTag) {
 
-          window.history.replaceState({}, "", newUrl);
-        });
-      });
+    filterProjects(activeTag);
+    setActiveButton(activeTag);
 
-    })
-    .catch(err => console.error("Project load error:", err));
+  } else {
+
+    filterProjects("all");
+    setActiveButton("all");
+
+  }
+
+
+  /* =========================================================
+     BUTTON EVENTS
+  ========================================================= */
+
+  buttons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      const filter = btn.dataset.filter;
+
+      filterProjects(filter);
+      setActiveButton(filter);
+
+      const newUrl =
+        filter === "all"
+          ? "/projects/"
+          : `/projects/?tag=${slugify(filter)}`;
+
+      window.history.replaceState(
+        {},
+        "",
+        newUrl
+      );
+
+    });
+
+  });
+
+
+  /* =========================================================
+     MOBILE FILTER
+  ========================================================= */
+
+  const filterToggle =
+    document.getElementById("filter-toggle");
+
+  const mobileMenu =
+    document.querySelector(".mobile-filter-menu");
+
+  if (filterToggle && mobileMenu) {
+
+    filterToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", e => {
+
+      const insideMenu =
+        mobileMenu.contains(e.target) ||
+        filterToggle.contains(e.target);
+
+      if (!insideMenu) {
+        mobileMenu.classList.remove("show");
+      }
+
+    });
+
+  }
+
 });

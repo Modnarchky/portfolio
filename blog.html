@@ -1,0 +1,42 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<main class="blog-index">
+  <section class="blog-list container reveal">
+    <h2>{{ page.title }}</h2>
+
+    {% assign active_posts = site.posts | where: "status", "active" %}
+
+{% for post in active_posts %}
+    <a href="{{ post.url }}" class="blog-preview-link">
+  <article class="blog-preview row">
+
+    {% if post.image %}
+    <div class="blog-preview-image">
+      <img
+        src="{{ post.image }}"
+        alt="{{ post.title }}"
+      >
+    </div>
+    {% endif %}
+
+    <div class="blog-preview-content">
+      <p>{{ post.date | date: "%B %-d, %Y" }}</p>
+      <h3>{{ post.title }}</h3>
+
+      <p>
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+      </p>
+
+      <p><u>Read more →</u></p>
+    </div>
+
+  </article>
+</a>
+{% endfor %}
+
+  </section>
+
+</main>
