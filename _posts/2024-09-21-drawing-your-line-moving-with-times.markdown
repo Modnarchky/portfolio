@@ -5,7 +5,7 @@ title:  "Drawing your line while moving with times — Keep up with AI without c
 date:   2024-09-21 01:52:33 +0800
 categories: reflections
 image: https://miro.medium.com/v2/resize:fit:720/format:webp/1*NXDyd0cqOSlWdOI2sP8GCQ.jpeg
-status: active
+status: A
 ---
 I’ve had the honour to participate in the Be More Festival 2024 held by ADPList recently. In the session “Unlocking AI: Myths, Facts & First Steps” by Daniel Simons of Human AI Experience, several interesting touch points of Generative AI were discussed. As Daniel shared about the background of Generative AI (GenAI) being a subset of deep learning, I couldn’t help but relate GenAI’s development journey to the rise of calculator usage in our daily lives.
 

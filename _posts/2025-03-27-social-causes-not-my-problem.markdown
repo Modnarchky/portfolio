@@ -5,7 +5,7 @@ title:  "Social causes? Not my problem as a UX Designer — Or is it?"
 date:   2025-03-27 01:52:33 +0800
 categories: reflections
 image: https://miro.medium.com/v2/resize:fit:720/format:webp/1*fuJDnqssO9ZRRoje5VO9dg.jpeg
-status: active
+status: A
 ---
 UX designers pride themselves on empathy — but if we only apply it to user flows and not societal issues, are we really practicing what we preach? Many articles and resources have explored the importance of empathy in UX design. However, I wish to extend the topic and explore why UX designers should be advocating for social causes.
 

@@ -5,7 +5,7 @@ title:  "Musings of My Journey: Building My Portfolio with AI"
 date:   2026-08-19 01:52:33 +0800
 categories: reflections
 image: ...
-status: draft
+status: D
 ---
 For the longest time, I have been searching for an ideal way to build my portfolio. When I was a fresh graduate back in 2018, I built my very first portfolio using Wix. It was easy and fuss-free, and at the time, that was exactly what I needed. 
 

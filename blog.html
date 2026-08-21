@@ -7,7 +7,7 @@ permalink: /blog/
   <section class="blog-list container reveal">
     <h2>{{ page.title }}</h2>
 
-    {% assign active_posts = site.posts | where: "status", "active" %}
+    {% assign active_posts = site.posts | where: "status", "A" %}
 
 {% for post in active_posts %}
     <a href="{{ post.url }}" class="blog-preview-link">

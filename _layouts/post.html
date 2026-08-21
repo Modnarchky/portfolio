@@ -14,21 +14,51 @@ layout: default
   <div class="blog-content">
     {{ content }}
   </div>
-  <section>
-  <nav class="post-navigation" aria-label="Post navigation">
-    {% if page.previous %}
-    <a class="post-nav post-nav-prev" href="{{ page.previous.url }}">
-      <p>← Previous <br>
-        <strong>{{ page.previous.title | truncate: 30 }}</strong></p>
-    </a>
+ <section>
+
+  {% assign found_current = false %}
+  {% assign previous_post = nil %}
+  {% assign next_post = nil %}
+
+  {% for post in site.posts %}
+
+    {% if post.url == page.url %}
+
+      {% assign found_current = true %}
+
+    {% elsif post.status != "D" %}
+
+      {% if found_current == false %}
+        {% assign previous_post = post %}
+      {% elsif next_post == nil %}
+        {% assign next_post = post %}
+      {% endif %}
+
     {% endif %}
 
-    {% if page.next %}
-    <a class="post-nav post-nav-next" href="{{ page.next.url }}">
-      <p>Next → <br><strong>{{ page.next.title | truncate: 30 }}</strong></p>
-    </a>
+  {% endfor %}
+
+  <nav class="post-navigation" aria-label="Post navigation">
+
+    {% if previous_post %}
+      <a class="post-nav post-nav-prev" href="{{ previous_post.url }}">
+        <p>
+          ← Previous <br>
+          <strong>{{ previous_post.title | truncate: 30 }}</strong>
+        </p>
+      </a>
+    {% endif %}
+
+    {% if next_post %}
+      <a class="post-nav post-nav-next" href="{{ next_post.url }}">
+        <p>
+          Next → <br>
+          <strong>{{ next_post.title | truncate: 30 }}</strong>
+        </p>
+      </a>
     {% endif %}
 
   </nav>
+
 </section>
 </article>

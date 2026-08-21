@@ -5,7 +5,7 @@ title:  "Balance: Sustainability and Art"
 date:   2023-11-24 01:52:33 +0800
 categories: reflections
 image: https://miro.medium.com/v2/resize:fit:720/format:webp/1*IoIQSefy6IE_Hj2MDudpXw.jpeg
-status: active
+status: A
 ---
 As sustainability and environmental-friendly sentiments emerge stronger in the modern world, it is worthwhile to celebrate how mankind is a step closer towards fighting climate change and slowing down the damage of human activities on this planet.
 
