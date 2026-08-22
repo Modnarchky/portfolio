@@ -7,7 +7,8 @@
 }
 
 .blog-header-image {
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
+  width: 680px;
   object-fit: cover;
 }
 

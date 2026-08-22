@@ -4,7 +4,7 @@ layout: post
 title:  "3 Lessons Learnt from Building My Portfolio with AI Assistance"
 date:   2026-08-21 01:52:33 +0800
 categories: reflections
-image: ...
+image: https://res.cloudinary.com/dkvnulmx9/image/upload/v1787427158/JG_BlogImage_1_spmd5f.jpg
 status: A
 ---
 I started building my portfolio since March 2026, because I wanted a website that felt more like me. I did not have a clear roadmap for how I was going to build it and I did not know what I could achieve alone. All I knew was that the portfolio builders I tried weren't giving me the flexibility I wanted, so I decided to see if I could create my portfolio how I wanted it.
