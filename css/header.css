@@ -183,7 +183,6 @@
      LAYERING FIX (IMPORTANT)
   ========================= */
   .site-header {
-    position: sticky;
     top: 0;
     z-index: 3000;
     background: white;
