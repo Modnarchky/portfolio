@@ -10,7 +10,7 @@
   <meta property="og:title" content="{{ page.title | default: "Jean Goh's Portfolio" }}">
   <meta property="og:description" content="Self-built — Designed, coded & deployed.">
   <meta property="og:image" content="{{ page.image | default: 'https://res.cloudinary.com/dkvnulmx9/image/upload/v1782653756/JG_OpenGraph_agq74i.webp' }}">
-  <meta property="og:url" content="https://jeanworks-design.github.io/">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="Jean Goh's Portfolio">
   <meta property="og:image:alt" content="{{ page.title | default: "Jean Goh's Portfolio" }}">
