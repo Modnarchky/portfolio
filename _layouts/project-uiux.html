@@ -24,7 +24,7 @@ layout: default
       </div>
     </div> 
     <!-- RIGHT CONTENT -->
-    <div class="column" style="flex: 1; gap: var(--space-3);">
+    <div class="column" style="flex: 1; gap: var(--space-2);">
       <div id="project-header" class="column">
         <h2 id="projectTitle">{{ page.project_title }}</h2>
         <div id="projectTags" class="tag-spacer">
@@ -43,9 +43,6 @@ layout: default
       </div>
     </div>
   </div>
-</section> 
-
-<section class="project-details">
   <div id="project-metadata" class="container left row column-layout">
     <div style="flex: 1;">
       <h4>My Role</h4>
@@ -64,12 +61,8 @@ layout: default
       <p id="projectTargetAudience">{{ page.targetAudience | join: ", " }}</p>
     </div>
   </div>
-</section>
-
-<section class="project-details">
-  <hr class="container">
-</section>
-
+  <hr class="divider">
+</section> 
 <section class="project-details">
   <div class="container left row column-layout">
     <div style="flex: 1; text-align: left;">
@@ -101,16 +94,16 @@ layout: default
 </section>  
 
 <section class="project-details">
-  <hr class="container">
+  <hr class="divider">
 </section>
 
 {{ content }}
 
 {% if page.takeaways %}
 <section class="project-details">
-  <div class="container left row column-layout">
-      <h3>Key Takeaways</h3>
-      <p>{{ page.takeaways }}</p>
-   </div>
+  <div class="container left">
+    <h3>Key Takeaways</h3>
+    <p>{{ page.takeaways }}</p>
+  </div>
 </section>
 {% endif %}

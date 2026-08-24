@@ -1,12 +1,18 @@
 
+section:has(#project-main) {
+  margin-block: 0;
+}
+
+
 #project-main {
+  margin-top: var(--space-2);
  padding-block: 0;
 }
 
 #project-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--space-5); /* space before "My Role" section */
+  margin-bottom: var(--space-4); /* space before "My Role" section */
 }
 
 .project-sections {

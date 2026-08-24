@@ -57,14 +57,16 @@ img {
 /* Specific Styles */
 #project-main h2 {
   text-align: left;
+  margin-bottom: var(--space-3);
 }
 
 
-hr {
+.divider {
   border: none;
   height: 3px;
   background-color: var(--color-border);
-  margin: var(--space-2) 0;
+  margin-block: var(--space-3);
+  max-width: 1200px;
 }
 
 .btn-wrap {

@@ -138,8 +138,13 @@
 }
 
 /*Breadcrumbs*/
+section:has(#breadcrumbs) {
+  margin-block: 0;
+}
+
 #breadcrumbs {
   padding-block: var(--space-4);
+  margin-block: var(--space-2);
 }
 
 #breadcrumbs nav {
@@ -194,7 +199,24 @@
   display: block;
 }
 
+.img-wrapper-crop {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
 
+.img-wrapper-crop img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(50px);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px 10px;
+}
+
+.img-wrapper-crop:hover img {
+    transform: translateY(0px);
+}
 /* Testimonial Slideshow */
 .viewport p,
 .viewport h4,

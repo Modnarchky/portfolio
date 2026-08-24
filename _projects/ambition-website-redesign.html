@@ -7,8 +7,8 @@ image: https://res.cloudinary.com/dkvnulmx9/image/upload/v1785160511/ambition_ui
 prototype: https://embed.figma.com/proto/RN9SFtulTPDVtSmlt0fWnG/Ambition-Singapore---High-Fidelity-Prototype?node-id=301-351&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=301%3A351&embed-host=share
 year: 2022
 client: Ambition Group Singapore
-featured: false
-shown: false
+featured: true
+shown: true
 project_title: Website Redesign for Recruitment Agency - Ambition Asia
 
 color:
@@ -49,179 +49,288 @@ challenge:
   - Register an Account
 
 impact: 
-  - value: "+64.8%"
+  - value: "+40.9%"
     description: "in surveyed user level of satisfaction"
-  - value: "+47.2%"
-    description: "in System Usability Test Score"
+  - value: "+51.9%"
+    description: "in System Usability Scale Score"
 
-takeaways:
+takeaways: This project taught me the importance of using research and user feedback to guide design decisions rather than relying on assumptions. Working within Ambition’s existing brand constraints also showed me that meaningful UX improvements can come from simplifying flows, improving navigation, and removing friction rather than redesigning everything visually. Ultimately, prioritising users’ needs for speed, simplicity, and transparency helped create a more intuitive experience.
 ---
 <section class="project-details">
   <div class="container left">
-  <h3>Starting with the Current Experience</h3>
-  <p>I conducted a heuristic evaluation using Jakob Nielsen’s 10 usability heuristics to identify the website’s key usability issues and strengths.</p>
-  <h4>Top 3 Problem Areas</h4>
-  <div class="row column-layout">
-    <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
-      <h5 class="blurb" style="background: #9d31691a; color: #9d3169;">Severity 4</h5>
-      <p>Problem</p>
-      <h4>Upload a CV leads to a login or register page, confusing users</h4>
+    <h5 style="letter-spacing:var(--space-1);">HEURISTICS EVALUATION</h5>
+    <h3>The Current Experience</h3>
+    <p>I conducted a heuristic evaluation using Jakob Nielsen’s 10 usability heuristics to identify the website’s key usability issues and strengths.</p>
+    <h4>Top 3 Problem Areas</h4>
+    <div class="row column-layout">
+      <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #9d31691a; color: #9d3169;">Severity 4</h5>
+        <p>Upload a CV leads to a login or register page, confusing users</p>
+      </div>
+      <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #9d31691a; color: #9d3169;">Severity 4</h5>
+        <p>"Call us" button is a dead end on desktop, plus broken links</p>
+      </div>
+      <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #9d31691a; color: #9d3169;">Severity 3</h5>
+        <p>Weak search, broken location filter, missing filters</p>
+      </div>
     </div>
-    <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
-      <h5 class="blurb" style="background: #9d31691a; color: #9d3169;">Severity 4</h5>
-      <p>Problem</p>
-      <h4>"Call us" button is a dead end on desktop, plus broken links</h4>
+    <br><br>
+    <h4>Top 3 Strengths</h4>
+    <div class="row column-layout">
+      <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #00693e1a; color: #00693e;">Strength 1</h5>
+        <p>Errors are surfaced clearly instead of failing silently</p>
+      </div>
+      <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #00693e1a; color: #00693e;">Strength 2</h5>
+        <p>Contact methods are instantly recognisable via icons</p>
+      </div>
+      <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #00693e1a; color: #00693e;">Strength 3</h5>
+        <p>Filters are reversible and their state is always visible</p>
+      </div>
     </div>
-    <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
-      <h5 class="blurb" style="background: #9d31691a; color: #9d3169;">Severity 3</h5>
-      <p>Problem</p>
-      <h4>Weak search, broken location filter, missing filters</h4>
-    </div>
-  </div>
-  <br><br>
-  <h4>Top 3 Strengths</h4>
-  <div class="row column-layout">
-    <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
-      <h5 class="blurb" style="background: #00693e1a; color: #00693e;">Strength 1</h5>
-      <p>What is working</p>
-      <h4>Errors are surfaced clearly instead of failing silently</h4>
-    </div>
-    <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
-      <h5 class="blurb" style="background: #00693e1a; color: #00693e;">Strength 2</h5>
-      <p>What is working</p>
-      <h4>Contact methods are instantly recognisable via icons</h4>
-    </div>
-    <div class="shadow"style="flex: 1; text-align: left; padding: var(--space-5); border-radius: var(--border-radius);">
-      <h5 class="blurb" style="background: #00693e1a; color: #00693e;">Strength 3</h5>
-      <p>What is working</p>
-      <h4>Filters are reversible and their state is always visible</h4>
-    </div>
-  </div>
   </div>
 </section> 
 <section class="project-details">
   <div class="container left">
-  <h3> Where do we stand?</h3>
-   <p>I compared the website to various well-known recruitment firms and job search platforms which are not Ambition’s competitors. The main features in comparison are the filter and sort functions, and the user flow for creating accounts.
+    <h5 style="letter-spacing:var(--space-1);">COMPETITIVE & COMPARATIVE ANALYSIS</h5>
+    <h3> Where Do We Stand?</h3>
+    <p>I compared the website to various well-known recruitment firms and job search platforms which are not Ambition’s competitors. Rather than benchmarking only against direct competitors, I looked at established job platforms to identify interaction patterns Ambition could learn from. 
+      <br><br>
+      The main features in comparison are the filter and sort functions, and the user flow for creating accounts.
 
     It was found that Ambition was severely lacking in filters and sort.
-   </p>
- <table class="table">
-  <thead>
-    <tr>
-      <th style="opacity: 0;"></th>
-      <th>Ambition</th>
-      <th>Direct Competitors</th>
-      <th>Indirect Competitors</th>
-    </tr>
-  </thead>
+    </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="opacity: 0;"></th>
+          <th>Ambition</th>
+          <th>Direct Competitors</th>
+          <th>Indirect Competitors</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <tr>
-      <td>Specialism</td>
-      <td>Yes</td>
-      <td>4/5</td>
-      <td>5/5</td>
-    </tr>
+    <tbody>
+      <tr>
+        <td><b>Specialism</b></td>
+        <td><div style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center;background-color: #00693e; color:#f2fffa;"><b>✔</b></div></td>
+        <td>4/5</td>
+        <td>5/5</td>
+      </tr>
 
-    <tr>
-      <td>Location</td>
-      <td>Yes</td>
-      <td>3/5</td>
-      <td>3/5</td>
-    </tr>
+      <tr>
+        <td><b>Location</b></td>
+        <td><div style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center;background-color: #00693e; color:#f2fffa;"><b>✔</b></div></td>
+        <td>3/5</td>
+        <td>3/5</td>
+      </tr>
 
-    <tr>
-      <td>Industry</td>
-      <td>No</td>
-      <td>3/5</td>
-      <td>2/5</td>
-    </tr>
+      <tr>
+        <td><b>Industry</b></td>
+        <td><div style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center;background-color: #9d3169; color:#fdf8fa;"><b>✖</b></div></td>
+        <td>3/5</td>
+        <td>2/5</td>
+      </tr>
 
-    <tr>
-      <td>Type of Contract</td>
-      <td>No</td>
-      <td>5/5</td>
-      <td>5/5</td>
-    </tr>
+      <tr>
+        <td><b>Type of Contract</b></td>
+        <td><div style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center;background-color: #9d3169; color:#fdf8fa;"><b>✖</b></div></td>
+        <td>5/5</td>
+        <td>5/5</td>
+      </tr>
    
-    <tr>
-      <td>Salary</td>
-      <td>No</td>
-      <td>5/5</td>
-      <td>3/5</td>
+      <tr>
+        <td><b>Salary</b></td>
+        <td><div style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center;background-color: #9d3169; color:#fdf8fa;"><b>✖</b></div></td>
+        <td>5/5</td>
+        <td>3/5</td>
+      </tr>
 
-    </tr>
-
-    <tr>
-      <td>Remote Work</td>
-      <td>No</td>
-      <td>1/5</td>
-      <td>1/5</td>
-    </tr>
-  </tbody>
-</table>
- </section>
-  <section class="project-details container left">
+      <tr>
+        <td><b>Remote Work</b></td>
+        <td><div style="display: inline-flex; width: 40px; height: 40px; border-radius: 50%; align-items: center; justify-content: center;background-color: #9d3169; color:#fdf8fa;"><b>✖</b></div></td>
+        <td>1/5</td>
+        <td>1/5</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section class="project-details">
+  <div class="container left">
+    <h5 style="letter-spacing:var(--space-1);">USABILITY TESTING</h5>
     <h3>Initial Usability Testing</h3>
-    <p> I conducted 5 usability tests across six key tasks to validate the issues identified during the heuristic and competitive analysis.</p>
-     <table class="table table-left">
-  <thead>
-    <tr>
-      <th>Task</th>
-      <th>Results</th>
-      <th>Key Findings</th>
-    </tr>
-  </thead>
+    <p> I conducted 5 usability tests across six key tasks to validate the issues identified. 5 users tested (2F/3M, avg. age 26.8), 4 of whom were new to the site — all working in fields Ambition recruits for. Recurring issues: missing filters, confusing labelling, and a messy, unclear layout — all pointing to the same three things users wanted: simplicity, speed, and transparency.
+    </p>
+    <table class="table table-left">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Completion Rate</th>
+          <th>Key Findings</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <tr>
-      <td>Find a job</td>
-      <td>4/5</td>
-      <td>Users struggled to discover and use filters and sorting</td>
-    </tr>
+      <tbody>
+        <tr>
+          <td>Find a job</td>
+          <td>4/5</td>
+          <td>Users struggled to discover and use filters and sorting</td>
+        </tr>
 
-    <tr>
-      <td>Contact a Recruiter</td>
-      <td>4/5</td>
-      <td>Users are confused with redundant "Call Us" button and had troubles</td>
-    </tr>
+        <tr>
+          <td>Contact a Recruiter</td>
+          <td>4/5</td>
+          <td>Users are confused with redundant "Call Us" button and had troubles</td>
+        </tr>
 
-    <tr>
-      <td>Refer a Friend</td>
-      <td>4/5</td>
-      <td>Referral actions were difficult to discover</td>
-    </tr>
+        <tr>
+          <td>Refer a Friend</td>
+          <td>4/5</td>
+          <td>Referral actions were difficult to discover</td>
+        </tr>
 
-    <tr>
-      <td>Find Salary Guide</td>
-      <td>5/5</td>
-      <td>Users found the information hierarchy and labelling unclear</td>
-    </tr>
+        <tr>
+          <td>Find Salary Guide</td>
+          <td>5/5</td>
+          <td>Users found the information hierarchy and labelling unclear</td>
+        </tr>
    
-    <tr>
-      <td>Upload CV</td>
-      <td>5/5</td>
-      <td>Users expected a drag-and-drop interaction and not led to the login page</td>
-    </tr>
+        <tr>
+          <td>Upload CV</td>
+          <td>5/5</td>
+          <td>Users expected a drag-and-drop interaction and not led to the login page</td>
+        </tr>
 
-    <tr>
-      <td>Account Registration</td>
-      <td>5/5</td>
-      <td>Users want more methods of account creation for convenience (E.g. Google)/td>
-    </tr>
-  </tbody>
-</table>
+        <tr>
+          <td>Account Registration</td>
+          <td>5/5</td>
+          <td>Users want more methods of account creation for convenience (E.g. Google)</td>
+        </tr>
+      </tbody>
+    </table>
+    <br><br>
+    <h4>Initial Ratings</h4>
+    <div class="row column-layout">
+      <div class="shadow"style="flex: 1; text-align: center; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h2 style="color:#9d3169">63.5 / 100</2>
+        <h4>System Usability Scale</h4>
+      </div>
+      <div class="shadow"style="flex: 1; text-align: center; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h2 style="color:#9d3169">5.4 / 10</2>
+        <h4>User Satisfaction</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="project-details">
+  <div class="container left">
+    <h5 style="letter-spacing:var(--space-1);">PERSONAS & PROBLEM STATMENTS</h5>
+    <h3>Two Archetypes, Two Shared Frustrations</h3>
+    <div class="row column-layout">
+      <div class="shadow"style="flex: 1; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #00693e1a; color: #00693e; margin-bottom: var(--space-2);">The Fresh Graduate</h5>
+        <h3>Josiah Tan</h3>
+        <p>26 · Software Developer</p>
+        <h4><i>"Career progression matters the most at this point in time"</i></h4>
+        <br>
+        <h4>Frustrations</h4>
+        <ul>
+          <li><p>Unsure of market rate for his skill level</p></li>
+          <li><p>Not enough time to prep for technical interview tests</p></li>
+        </ul>
+        <br>
+        <h4>Needs</h4>
+        <ul>
+          <li><p>Transparency in salary information</p></li>
+          <li><p>Job hunting methods that save time</p></li>
+        </ul>
+      </div>
+      <div class="shadow"style="flex: 1; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h5 class="blurb" style="background: #00693e1a; color: #00693e; margin-bottom: var(--space-2);">Mid-Career Jobseeker</h5>
+        <h3>Brenda Lim</h3>
+        <p>27 · Senior Accounts Executive</p>
+        <h4><i>"Salary is the top factor of consideration in a job offer"</i></h4>
+        <br>
+        <h4>Frustrations</h4>
+        <ul>
+          <li><p>Has to look through listings job by job — no filtering</p></li>
+          <li><p>Similar job titles pay wildly different amounts</p></li>
+        </ul>
+        <br>
+        <h4>Needs</h4>
+        <ul>
+          <li><p>A way to benchmark her pay better</p></li>
+          <li><p>Clear, concise, more relevant job listings</p></li>
+        </ul>
+      </div>
+    </div>
+    <br><br>
+  <h4>How Might We...</h4>
+  <div style="border-left: 3px solid #00693e; padding-left: var(--space-4);">
+    <p>1. Help Josiah and Brenda each find relevant jobs faster?</p>
+    <p>2. Give both Josiah and Brenda salary transparency?</p>
+  </div>
 </div>
-  </section>
-   <section class="project-details container left">
-   <div class="img-wrapper-full shadow" style="height: auto">
-         <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1782411834/Blog_mockup_yemlll.jpg" class="open-lightbox-zoom">
+</section>
+<section class="project-details" style="background-color: var(--color-surface);">
+  <div class="container left" style="padding-top: 1px;">
+    <h5 style="letter-spacing:var(--space-1);">INFORMATION ARCHITECTURE</h5>
+    <h3>Organising Information Around User Needs</h3>
+    <p>An open card sort with the same 5 users reshaped the hamburger menu — the Salary Guide moved higher, closer to where users expected it.</p>
+
+        <div class="img-wrapper-full shadow" style="height: auto;">
+        <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1787578131/Information-Architecture_pmrcmd.jpg" class="open-lightbox-zoom">
+    </div>
+    <h5 style="letter-spacing:var(--space-1);">SKETCHES</h5>
+    <h3>Exploring The Layout</h3>
+    <div class="row column-layout">
+      <div style="flex: 1;">
+        <div class="img-wrapper-full shadow" style="height: auto;">
+          <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1787503283/Sketch_edited_qqhuke.jpg" class="open-lightbox-zoom">
         </div>
-        <h4 style="margin-top: var(--space-6)"> Hot Job Tiles</h4>
-        <div class="img-wrapper-full shadow" style="height: auto">
-         <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1782413486/Hotjobs_mockup_n2oyaj.jpg" class="open-lightbox-zoom">
+      </div>
+      <div style="flex: 1;">
+        <div class="img-wrapper-full shadow" style="height: auto;">
+          <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1787503283/Sketch-2_edited_fna6kd.jpg" class="open-lightbox-zoom">
         </div>
       </div>
     </div>
-  </section>
+    <h5 style="letter-spacing:var(--space-1);">ITERATIONS</h5>
+    <h3>Mid-Fidelity Prototype & Testing</h3>
+    <p>I translated the research findings into a mid-fidelity prototype and tested the revised flows with users. Testing focused on whether the new navigation, filtering, and key actions reduced the friction identified in the initial evaluation.</p>
+    <div class="row column-layout">
+      <div style="flex: 1;">
+        <div class="img-wrapper-crop">
+          <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1787589571/Job_Search_1_sxe5ob.png" class="open-lightbox-zoom shadow"></div>
+        </div>
+      <div style="flex: 1;">
+        <div class="img-wrapper-crop">
+          <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1787589571/Market_Insights_Salary_Guide_g5qvqj.png" class="open-lightbox-zoom shadow"></div>
+      </div>
+      <div style="flex: 1;">
+        <div class="img-wrapper-crop">
+          <img src="https://res.cloudinary.com/dkvnulmx9/image/upload/v1787589572/Meet_the_Team_e206vi.png" class="open-lightbox-zoom shadow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="project-details">
+  <div class="container left">
+    <h3>Final Ratings</h3>
+    <p>I tested the revised prototype with 5 users across the same six tasks used in the initial evaluation. The second round focused on whether the redesigned navigation, filtering and key actions reduced the friction identified earlier.</p>
+    <div class="row column-layout">
+      <div class="shadow"style="flex: 1; text-align: center; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h2 style="color:#00693e">89.5 / 100</2>
+        <h4>System Usability Scale</h4>
+      </div>
+      <div class="shadow"style="flex: 1; text-align: center; padding: var(--space-5); border-radius: var(--border-radius);">
+        <h2 style="color:#00693e">8.2 / 10</2>
+        <h4>User Satisfaction</h4>
+      </div>
+    </div>
+  </div>
+</section>

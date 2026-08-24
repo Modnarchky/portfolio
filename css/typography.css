@@ -51,7 +51,7 @@ p {
   font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 b {
@@ -59,9 +59,29 @@ b {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  line-height: 1.6;
+  line-height: inherit;
 }
 
+i{
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  font-style: italic;
+}
+
+figcaption {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: var(--text-xs);
+  color: var(--color-text);
+  line-height: 1.4;
+  padding-block: var(--space-3);
+}
+
+.project-details h5{
+  margin-top: var(--space-8);
+}
 
 @media (max-width: 1024px) {
   h1 { font-size: 3.5rem; }
